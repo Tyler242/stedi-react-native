@@ -5,6 +5,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Timer from './Timer.js';
 import SettingsScreen from './SettingsScreen.js';
 import Home from './Home.js';
+import Login from './LoginPage.js';
+import LoginData from './LoginData.js';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -16,10 +18,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName='Home'
+        initialRouteName='Login'
         activeColor='white'
-        barStyle={{ backgroundColor: 'green' }}
-      >
+        barStyle={{ backgroundColor: 'green' }}>
         <Tab.Screen
           name='Home'
           component={Home}
@@ -50,14 +51,19 @@ export default function App() {
             ),
           }}
         />
+        <Tab.Screen
+          name='Login'
+          component={LoginData}
+          options={{
+            tabBarLabel: 'Login',
+            tabBarIcon: ({ color }) => (
+              <FontAwesome name='sign-in' color={color} size={26} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
-
-
 }
 
-
-const styles = StyleSheet.create({
-  
-});
+const styles = StyleSheet.create({});

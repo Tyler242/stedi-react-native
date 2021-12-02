@@ -3,15 +3,15 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { Card, ListItem, Button, Icon } from 'react-native-elements';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-function Setting() {
+function Login() {
   return (
     <View>
       <Button
-        title='Settings'
-        onPress={() => console.log('Setting Button pressed')}
+        title='Login'
+        onPress={() => console.log('Logging In')}
       />
     </View>
   );
 }
 
-export default Setting;
+export default Login;
